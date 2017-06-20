@@ -5,7 +5,7 @@ Class # 4  -  Exercise
 import vtk
 
 rectGridReader = vtk.vtkRectilinearGridReader()
-rectGridReader.SetFileName("data/jet4_0.500.vtk")
+rectGridReader.SetFileName("../data/jet4_0.500.vtk")
 rectGridReader.Update()
 
 #------------ Grid Outline and Grid Rectilinear Geometry Filters
