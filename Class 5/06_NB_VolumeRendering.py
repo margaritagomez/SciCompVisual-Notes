@@ -39,8 +39,11 @@ imageData2 = probeFilter.GetImageDataOutput()
 ##------------FILTER, MAPPER, AND ACTOR: VOLUME RENDERING -------------------
 # Create transfer mapping scalar value to opacity
 opacityTransferFunction = vtk.vtkPiecewiseFunction()
-opacityTransferFunction.AddPoint(0, 0.2)
-opacityTransferFunction.AddPoint(14, 0.0)
+opacityTransferFunction.AddPoint(0, 0.3)
+opacityTransferFunction.AddPoint(4, 0.6)
+opacityTransferFunction.AddPoint(8, 0.8)
+opacityTransferFunction.AddPoint(11, 0.9)
+opacityTransferFunction.AddPoint(14, 1.0)
 
 # Create transfer mapping scalar value to color
 colorTransferFunction = vtk.vtkColorTransferFunction()
