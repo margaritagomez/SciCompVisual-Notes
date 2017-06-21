@@ -1,7 +1,7 @@
 import vtk
 
 rectGridReader = vtk.vtkRectilinearGridReader()
-rectGridReader.SetFileName("D:/Notebooks_Bogota2017/SS_2017/data/jet4_0.500.vtk")
+rectGridReader.SetFileName("../data/jet4_0.500.vtk")
 rectGridReader.Update()
 
 #------------ CHALLENGE ONE ----------------------
