@@ -5,8 +5,8 @@ from matplotlib import animation, rc
 
 
 # define the discretization grid
-dx = 0.1  # space increment (default 0.1)
-dt = 0.01 # time increment  (default 0.01)
+dx = 0.01  # space increment (default 0.1)
+dt = 0.009 # time increment  (default 0.01)
 
 tmin =   0.0  # initial time
 tmax = 100.0  # final time
@@ -95,5 +95,5 @@ plt.xlim(xmin, xmax)
 plt.ylim(-1.5, 1.5)
 plt.xlabel('u')
 
-line_ani = animation.FuncAnimation(fig1, step_heat, nt-1, interval=5, repeat=False, blit=True)
+line_ani = animation.FuncAnimation(fig1, step_wave, nt-1, interval=5, repeat=False, blit=True)
 plt.show()
