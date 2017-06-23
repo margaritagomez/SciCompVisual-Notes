@@ -11864,14 +11864,14 @@
         <Domain name="range" id="5815.ViewTime.range"/>
       </Property>
       <Property name="CameraFocalPoint" id="5815.CameraFocalPoint" number_of_elements="3">
-        <Element index="0" value="38.7499999999997"/>
-        <Element index="1" value="102.243896484375"/>
-        <Element index="2" value="7.99899999995291"/>
+        <Element index="0" value="38.7500000000004"/>
+        <Element index="1" value="102.243896484374"/>
+        <Element index="2" value="7.9989999999526"/>
       </Property>
       <Property name="CameraFocalPointInfo" id="5815.CameraFocalPointInfo" number_of_elements="3">
-        <Element index="0" value="38.7499999999997"/>
-        <Element index="1" value="102.243896484375"/>
-        <Element index="2" value="7.99899999995291"/>
+        <Element index="0" value="38.7500000000004"/>
+        <Element index="1" value="102.243896484374"/>
+        <Element index="2" value="7.9989999999526"/>
       </Property>
       <Property name="CameraParallelScale" id="5815.CameraParallelScale" number_of_elements="1">
         <Element index="0" value="39.2831467852108"/>
@@ -11880,27 +11880,27 @@
         <Element index="0" value="39.2831467852108"/>
       </Property>
       <Property name="CameraPosition" id="5815.CameraPosition" number_of_elements="3">
-        <Element index="0" value="102.620547407534"/>
-        <Element index="1" value="108.924520730218"/>
-        <Element index="2" value="-99.7520634742322"/>
+        <Element index="0" value="41.1391414644289"/>
+        <Element index="1" value="188.110454213295"/>
+        <Element index="2" value="-83.4099465704855"/>
       </Property>
       <Property name="CameraPositionInfo" id="5815.CameraPositionInfo" number_of_elements="3">
-        <Element index="0" value="102.620547407534"/>
-        <Element index="1" value="108.924520730218"/>
-        <Element index="2" value="-99.7520634742322"/>
+        <Element index="0" value="41.1391414644289"/>
+        <Element index="1" value="188.110454213295"/>
+        <Element index="2" value="-83.4099465704855"/>
       </Property>
       <Property name="CameraViewAngle" id="5815.CameraViewAngle" number_of_elements="1">
         <Element index="0" value="30"/>
       </Property>
       <Property name="CameraViewUp" id="5815.CameraViewUp" number_of_elements="3">
-        <Element index="0" value="-0.0379511774454029"/>
-        <Element index="1" value="-0.995723250309349"/>
-        <Element index="2" value="-0.0842313298238474"/>
+        <Element index="0" value="0.589496006638614"/>
+        <Element index="1" value="-0.596382270263011"/>
+        <Element index="2" value="-0.544814322382464"/>
       </Property>
       <Property name="CameraViewUpInfo" id="5815.CameraViewUpInfo" number_of_elements="3">
-        <Element index="0" value="-0.0379511774454029"/>
-        <Element index="1" value="-0.995723250309349"/>
-        <Element index="2" value="-0.0842313298238474"/>
+        <Element index="0" value="0.589496006638614"/>
+        <Element index="1" value="-0.596382270263011"/>
+        <Element index="2" value="-0.544814322382464"/>
       </Property>
       <Property name="EyeAngle" id="5815.EyeAngle" number_of_elements="1">
         <Element index="0" value="2"/>
