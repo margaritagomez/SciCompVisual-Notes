@@ -9,12 +9,14 @@ xmi, xma, ymi, yma, zmi, zma = output.GetBounds()
 
 # Color Transfer Function and LookUpTable
 # Create transfer mapping scalar value to color
+
+## lower value--> yellow            ## higher value --> red
 colorTransferFunction = vtk.vtkColorTransferFunction()
 colorTransferFunction.AddRGBPoint(0.0, 1.0, 1.0, 0.0)
-colorTransferFunction.AddRGBPoint(0.025, 1.0, 0.0, 0.0)
-colorTransferFunction.AddRGBPoint(0.05, 0.0, 0.0, 1.0)
-colorTransferFunction.AddRGBPoint(0.15, 0.0, 1.0, 0.0)
-colorTransferFunction.AddRGBPoint(0.5, 0.0, 1.0, 0.0)
+colorTransferFunction.AddRGBPoint(0.005, 219/255, 157/255, 13/255)
+colorTransferFunction.AddRGBPoint(0.01, 219/255, 112/255, 13/255)    
+colorTransferFunction.AddRGBPoint(0.15, 219/255, 78/255, 13/255)
+colorTransferFunction.AddRGBPoint(0.25, 1.0, 0.0, 0.0)
 
 tableSize = 30
 
@@ -42,7 +44,7 @@ outlineMapper = vtk.vtkPolyDataMapper()
 outlineMapper.SetInputConnection(outline.GetOutputPort())
 outlineActor = vtk.vtkActor()
 outlineActor.SetMapper(outlineMapper)
-outlineActor.GetProperty().SetColor(1,1,1)
+outlineActor.GetProperty().SetColor(0,1,0)
 
 # Compute streamlines
 streamline = vtk.vtkStreamTracer()
@@ -50,7 +52,7 @@ streamline.SetSourceConnection(plane.GetOutputPort())
 streamline.SetInputConnection(reader.GetOutputPort())
 # Try different integration alternatives! See the documentation of vtkStreamTracer
 streamline.SetIntegrationDirectionToForward()
-streamline.SetMaximumPropagation(1)
+streamline.SetMaximumPropagation(6)
 streamline.SetComputeVorticity(True)
 
 # Pass the streamlines to the mapper
@@ -81,8 +83,9 @@ gOutlineActor.GetProperty().SetColor(1.0,1.0,1.0)
 renderer = vtk.vtkRenderer()
 renderer.SetBackground(0.0, 0.0, 0.0)
 renderer.AddActor(streamlineActor)
-renderer.AddActor(outlineActor)
+
 renderer.AddActor(gOutlineActor)
+renderer.AddActor(outlineActor)
 
 renderWindow = vtk.vtkRenderWindow()
 renderWindow.AddRenderer(renderer)
