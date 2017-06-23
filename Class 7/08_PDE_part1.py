@@ -1,4 +1,5 @@
 import numpy as np
+import math
 import matplotlib.pyplot as plt
 from matplotlib import animation, rc
 
@@ -45,7 +46,8 @@ def step_wave(t):
 
         # set initial condition
         for i in range(0,nx):
-            u[t,i] = init_wave( xmin + i*dx )
+            #u[t,i] = init_wave( xmin + i*dx )
+            u[t,i]=0
 
     else:
         # compute second x-derivative using central differences
@@ -55,7 +57,7 @@ def step_wave(t):
         u[t,1:nx-1] = 2*u[t-1,1:nx-1] - u[t-2,1:nx-1] + (c*dt)**2 * ddx
 
         # apply boundary conditions
-        u[t,0]    = 0
+        u[t,0]    = np.sin(2*t*dt*math.pi)
         u[t,nx-1] = 0
 
     l.set_data(np.linspace(xmin,xmax,nx), u[t,:])
@@ -69,7 +71,8 @@ def step_heat(t):
 
         print( 'stability:', k*dt/(dx**2) )
         for i in range(0,nx):
-            u[t,i] = init_wave( xmin + i*dx )
+            #u[t,i] = init_wave( xmin + i*dx )
+            u[t,i] = 0
 
     else:
 
@@ -80,7 +83,7 @@ def step_heat(t):
         u[t,1:nx-1] = u[t-1,1:nx-1] + k * dt * ddx
 
         # apply boundary conditions
-        u[t,0]    = 0.0
+        u[t,0]    = np.sin(2*t*dt*math.pi)
         u[t,nx-1] = 0.0
 
     l.set_data(np.linspace(xmin,xmax,nx), u[t,:])
