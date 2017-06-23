@@ -20,7 +20,7 @@ contoursFilter.SetInputConnection(reader.GetOutputPort())
 contoursFilter.GenerateValues(10, scalarRange)
 
 contoursMapper = vtk.vtkPolyDataMapper()
-contoursMapper.SetInputConnection(contoursFilter.GetOutputPort())
+contoursMapper.SetInputConnection(imageDataGeometryFilter.GetOutputPort())
 contoursMapper.SetColorModeToMapScalars()
 contoursMapper.ScalarVisibilityOn()
 contoursMapper.SelectColorArray("wind_speed")
